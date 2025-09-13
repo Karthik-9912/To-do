@@ -1,0 +1,14 @@
+<form action="" method="post">
+        {% csrf_token %}
+        <label for="">TASK</label>
+        <input type="text" name="task" id="" value="{{data.task}}">
+        <br><br>
+        <label for="">DESCRIPTION</label>
+        <input type="text" name="desc" id="" value="{{data.desc}}">
+        <br><br>
+        {% if a %}
+            <button type="submit">UPDATE</button>
+        {% else %}
+            <button type="submit">CREATE TASK</button>
+        {% endif %}
+    </form>
