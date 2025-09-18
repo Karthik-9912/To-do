@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-        form{
-            border: 2px solid;
-            width: 600px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-   <h2>This is create page</h2>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'form.css' %}">
+  </head>
+  <body>
     {% include 'form.html' %}
-     <a href="{% url 'display' %}">View Tasks</a>
-</body>
+    <div class="elements">
+      <!-- <div><h2>This is create page</h2></div> -->
+      <div id="viewTasks"><a href="{% url 'display' %}">View Tasks</a></div>
+      <div id="logout"><a href="{% url 'logout' %}">Logout</a></div>
+    </div>
+  </body>
 </html>

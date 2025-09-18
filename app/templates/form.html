@@ -1,4 +1,4 @@
-<form action="" method="post">
+<!-- <form action="" method="post">
         {% csrf_token %}
         <label for="">TASK</label>
         <input type="text" name="task" id="" value="{{data.task}}">
@@ -11,4 +11,81 @@
         {% else %}
             <button type="submit">CREATE TASK</button>
         {% endif %}
-    </form>
+    </form> -->
+
+
+<div class="glitch-form-wrapper">
+  <form class="glitch-card" action="" method="post">
+    {% csrf_token %}
+    <div class="card-header">
+      <div class="card-title">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+          <path
+            d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+          ></path>
+          <path
+            d="M12 11.5a3 3 0 0 0 -3 2.824v1.176a3 3 0 0 0 6 0v-1.176a3 3 0 0 0 -3 -2.824z"
+          ></path>
+        </svg>
+        <span>TO_DO_CREATION</span>
+      </div>
+
+      <div class="card-dots"><span></span><span></span><span></span></div>
+    </div>
+
+    <div class="card-body">
+      <div class="form-group">
+        <input
+          type="text"
+          id="username"
+          name="task"
+          value="{{data.task}}"
+          required=""
+          placeholder=""
+        />
+        <label for="username" class="form-label" data-text="TASK"
+          >TASK</label
+        >
+      </div>
+
+      <div class="form-group">
+        <input
+          type="text"
+          id="password"
+          name="desc"
+          value="{{data.desc}}"
+          required=""
+          placeholder=""
+        />
+        <label for="password" class="form-label" data-text="DESCRIPTION"
+          >DESCRIPTION</label
+        >
+      </div>
+
+       {% if a %}
+            <button type="submit">UPDATE</button>
+        {% else %}
+      <button data-text="CREATE TASK" type="submit" class="submit-btn">
+        <span class="btn-text">CREATE TASK</span>
+      </button>
+      {% endif %}
+    </div>
+       
+            <!-- <button type="submit">CREATE TASK</button> -->
+        
+  </form>
+</div>
+
+    
