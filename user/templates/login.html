@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="">USERNAME</label>
+        <input type="text" name="un" id=""><br><br>
+        <label for="">PASSWORD</label>
+        <input type="password" name="pswd" id=""><br><br>
+        <button>Login</button>
+    </form>
+    <p>{{msg.as_p}}<a href="{% url 'register' %}">Register</a></p>
+</body>
+</html>
